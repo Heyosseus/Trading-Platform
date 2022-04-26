@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader two</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        :root{
+            --clr-dark: 230 35% 23%;
+            --clr-light: 231 47% 90%;
+            --clr-white: 0 0% 100%; 
+
+            --primary-color: #1D8A99;
+            --secondary-color: #3586A1;
+            --sky-blue: #4D81A9;
+            --viridian-green: #199AA6;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;   
+        }
+        
+
+        body{
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .input__name{
+            height: 30px;
+            margin: 1rem;
+        }
+        label{
+            display: flex;
+        }
+        .text__input{
+            margin: 1rem;
+            box-shadow: black;
+            border: none;
+            outline:none;
+            height: 35px;
+            background: #2d2d2d23;
+            font-size: 18px;
+            width: 92%;
+        }
+
+        .card{
+            background: hsl(var(--clr-light));
+            width: 500px;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.301) ;
+            animation: floating 3s linear 1s infinite;
+            
+        }
+        .label__heading{
+            margin: 1rem; 
+            font: 600 1rem 'Quicksand' , sans-serif;
+            font-size: 22px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        @keyframes floating{
+            0%{transform:translateY(0px)}
+            50%{transform:translateY(20px)}
+            100%{transform:translateY(0px)}
+        }
+
+        .cloud {
+                width: 350px; height: 120px;
+
+                background: #FFF;
+                background: linear-gradient(top, #FFF 100%);
+                background: -webkit-linear-gradient(top, #FFF 100%);
+                background: -moz-linear-gradient(top, #FFF 100%);
+                background: -ms-linear-gradient(top, #FFF 100%);
+                background: -o-linear-gradient(top, #FFF 100%);
+
+                border-radius: 100px;
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+
+                position: absolute;
+                margin: 120px auto 20px;
+                z-index:-1;
+                transition: ease 1s;
+            }
+
+            .cloud:after, .cloud:before {
+                content: '';
+                position: absolute;
+                background: #FFF;
+                z-index: -1
+            }
+
+            .cloud:after {
+                width: 100px; height: 100px;
+                top: -50px; left: 50px;
+
+                border-radius: 100px;
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+            }
+
+            .cloud:before {
+                width: 180px; height: 180px;
+                top: -90px; right: 50px;
+
+                border-radius: 200px;
+                -webkit-border-radius: 200px;
+                -moz-border-radius: 200px;
+            }
+
+            /* bottom buttons */
+             #filename{
+                width: calc(100% - 300px);
+                border: 2px solid var(--viridian-green);
+                border-radius: 4px;
+                padding: 0 8px;
+                height: 40px ;
+                line-height: 50px;
+                font-size: 20px;
+                margin-left: 25px;
+                margin-bottom: 10px;
+            }
+
+            #download{
+                background: var(--viridian-green);
+                color: #fff;
+                font-size: 20px;
+                height: 40px;
+                border: none;
+                outline: none;
+                width: 180px;
+                border-radius: 4px;
+                margin-left: 55px;
+                cursor: pointer;
+
+            }
+            
+            .x1 {
+                top:-50px;
+                left:100px;
+                -webkit-transform: scale(0.4);
+                -moz-transform: scale(0.5);
+                transform: scale(0.2);
+                opacity: 0.9;
+                -webkit-animation: moveclouds 15s linear infinite;
+                -moz-animation: moveclouds 15s linear infinite;
+                -o-animation: moveclouds 15s linear infinite;
+            }
+            
+            .x1_5{
+                top:-80px;
+                left:300px;
+                -webkit-transform: scale(0.3);
+                -moz-transform: scale(0.3);
+                transform: scale(0.3);
+                -webkit-animation: moveclouds 17s linear infinite;
+                -moz-animation: moveclouds 17s linear infinite;
+                -o-animation: moveclouds 17s linear infinite; 
+            }
+
+            .x2 {
+                left: 550px;
+                top:30px;
+                -webkit-transform: scale(0.8);
+                -moz-transform: scale(0.4);
+                transform: scale(0.6);
+                opacity: 0.6; 
+                -webkit-animation: moveclouds 25s linear infinite;
+                -moz-animation: moveclouds 25s linear infinite;
+                -o-animation: moveclouds 25s linear infinite;
+            }
+
+            .x3 {
+                left: 350px; bottom: -70px;
+
+                -webkit-transform: scale(0.6);
+                -moz-transform: scale(0.6);
+                transform: scale(0.6);
+                opacity: 0.9; 
+
+                -webkit-animation: moveclouds 25s linear infinite;
+                -moz-animation: moveclouds 25s linear infinite;
+                -o-animation: moveclouds 25s linear infinite;
+            }
+
+            .x4 {
+                left: 670px; bottom: 80px;
+
+                -webkit-transform: scale(0.75);
+                -moz-transform: scale(0.75);
+                transform: scale(0.75);
+                opacity: 0.85;
+
+                -webkit-animation: moveclouds 18s linear infinite;
+                -moz-animation: moveclouds 18s linear infinite;
+                -o-animation: moveclouds 18s linear infinite;
+            }
+
+            .x5 {
+                left: 250px; top: 300px;
+
+                -webkit-transform: scale(0.5);
+                -moz-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 0.5; 
+
+                -webkit-animation: moveclouds 20s linear infinite;
+                -moz-animation: moveclouds 20s linear infinite;
+                -o-animation: moveclouds 20s linear infinite;
+            }
+
+            @-webkit-keyframes moveclouds {
+                0% {margin-left: 1000px;}
+                100% {margin-left: -1000px;}
+            }
+            @-moz-keyframes moveclouds {
+                0% {margin-left: 1000px;}
+                100% {margin-left: -1000px;}
+            }
+            @-o-keyframes moveclouds {
+                0% {margin-left: 1000px;}
+                100% {margin-left: -1000px;}
+            }
+
+        #card{  animation: puff 2s linear infinite;}
+    </style>
+</head>
+<body>
+    <div class="card swing">
+        <label class="label__heading" for="story">Name:</label>
+        <input class="text__input" id="text__2" name="story" autofocus placeholder="">
+    
+    
+        <label class="label__heading" for="story">Trading history:</label>
+        <textarea class="text__input" id="text__1" name="story" rows="5" cols="33" placeholder="...">
+            </textarea>
+    
+        <label class="label__heading" for="story">Data:</label>
+        <textarea class="text__input" id="text" name="story" rows="5" cols="33" placeholder="...">
+            </textarea>
+    
+        <input placeholder="Specify a filename" id="filename">
+        <!-- download button -->
+        <button id="download">Download file</button>
+    
+    
+    </div>
+
+    <div id="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x1_5"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

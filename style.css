@@ -1,0 +1,124 @@
+:root{
+    --clr-dark: 230 35% 13%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%; 
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;   
+}
+
+.navbar__head {
+    background-color: hsl(var(--clr-dark));
+    color: #fff;
+    font: 600 1rem 'Quicksand' , sans-serif;
+    font-size: 40px;
+    padding: 1rem 3.5rem ;
+    cursor: pointer;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0  auto;
+    padding: 0 20px;
+    align-items: center;
+
+}
+
+
+.navbar__btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+    height: 40px;
+    width: 90px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+    font-size: 22px;
+    border: none;
+    outline: none;
+}
+
+.button:hover{
+    background: hsl(var(--clr-light));
+    transition: all 0.1s ease-in-out;
+    transform: scale(0.99);
+    box-shadow: 0 0 40px rgba(1, 19, 32, 0.1) ;
+
+}
+
+.container{
+    background-color: hsl(var(--clr-light));
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font: 600 1rem 'Quicksand' , sans-serif;
+
+}
+
+
+
+.list__item{
+    background: hsl(var(--clr-dark));
+    color: hsl(var(--clr-white));
+    padding: 1.8em;
+    border-radius: 20px;
+    width: 700px;
+    max-width: 430px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 40px rgba(1, 19, 32, 0.1);
+    list-style-type: none;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+.list__item:hover {
+    transform: scale(0.98);
+    background-color: rgba(39, 51, 82, 0.9);
+}
+
+.list__menu {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    
+}
+
+
+
+.list__links {
+    text-decoration: none;
+    color: var(--clr-dark);
+    align-items: center;
+    
+}
+
+/* Trader One Webpage */
